@@ -23,10 +23,10 @@ gaudi_add_module(k4RecCalorimeterPlugins
 
 
 set(public_headers
-  include/k4RecCalorimeter/RecCalorimeter/src/components/DualCrysCalDigi.h
-  include/k4RecCalorimeter/RecCalorimeter/src/components/DualCrysCalDigiImpl.h
-  include/k4RecCalorimeter/RecCalorimeter/src/components/DualCrysCalorimeterHit.h
-  include/k4RecCalorimeter/RecCalorimeter/src/components/DualCrystalDigi.h
+  src/components/DualCrysCalDigi.h
+  src/components/DualCrysCalDigiImpl.h
+  src/components/DualCrysCalorimeterHit.h
+  src/components/DualCrystalDigi.h
 )
 
 
