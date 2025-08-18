@@ -23,14 +23,14 @@ gaudi_add_module(k4RecCalorimeterPlugins
 
 
 set(public_headers
-  include/${PROJECT_NAME}/src/components/DualCrysCalDigi.h
-  include/${PROJECT_NAME}/src/components/DualCrysCalDigiImpl.h
-  include/${PROJECT_NAME}/src/components/DualCrysCalorimeterHit.h
-  include/${PROJECT_NAME}/src/components/DualCrystalDigi.h
+  include/k4RecCalorimeter/RecCalorimeter/src/components/DualCrysCalDigi.h
+  include/k4RecCalorimeter/RecCalorimeter/src/components/DualCrysCalDigiImpl.h
+  include/k4RecCalorimeter/RecCalorimeter/src/components/DualCrysCalorimeterHit.h
+  include/k4RecCalorimeter/RecCalorimeter/src/components/DualCrystalDigi.h
 )
 
 
-set_target_properties(${PROJECT_NAME}
+set_target_properties(k4RecCalorimeterPlugins
   PROPERTIES
   PUBLIC_HEADER "${public_headers}"
 )
