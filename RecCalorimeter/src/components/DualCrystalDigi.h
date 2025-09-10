@@ -8,7 +8,6 @@
 #include "k4FWCore/DataHandle.h"
 #include "DDRec/CellIDPositionConverter.h"
 
-namespace DUAL {
 
 class DualCrystalDigi : public Gaudi::Algorithm {
 public:
@@ -42,6 +41,5 @@ private:
                    dd4hep::rec::CellIDPositionConverter& posTool) const;
 };
 
-} // namespace DUAL
 
 #endif // DUAL_TEST_BEAM_DUALCRYSTALDIGI_H

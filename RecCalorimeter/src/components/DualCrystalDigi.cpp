@@ -5,7 +5,6 @@
 #include <cmath>
 #include <random>
 
-namespace DUAL {
 
 DualCrystalDigi::DualCrystalDigi(const std::string& name, ISvcLocator* svcLoc)
  : Gaudi::Algorithm(name, svcLoc) {
@@ -85,6 +84,5 @@ StatusCode DualCrystalDigi::finalize() {
   return StatusCode::SUCCESS;
 }
 
-} // namespace DUAL
 
-DECLARE_COMPONENT(DUAL::DualCrystalDigi)
+DECLARE_COMPONENT(DualCrystalDigi)
