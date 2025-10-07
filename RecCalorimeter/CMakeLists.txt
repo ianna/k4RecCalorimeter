@@ -21,10 +21,28 @@ gaudi_add_module(k4RecCalorimeterPlugins
                       ${FASTJET_LIBRARIES}
                       )
 
+target_include_directories(k4RecCalorimeterPlugins PUBLIC
+  $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>)
+
+set(public_headers
+  src/components/DualCrysCalDigi.h
+  src/components/DualCrysCalDigiImpl.h
+  src/components/DualCrysCalorimeterHit.h
+  src/components/DualCrystalDigi.h
+)
+
+
+set_target_properties(k4RecCalorimeterPlugins
+  PROPERTIES
+  PUBLIC_HEADER "${public_headers}"
+)
+
+		      
 install(TARGETS k4RecCalorimeterPlugins
   EXPORT k4RecCalorimeterTargets
   RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}" COMPONENT bin
   LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}" COMPONENT shlib
+  PUBLIC_HEADER DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}/${PROJECT_NAME}"
   COMPONENT dev)
 
 target_include_directories(k4RecCalorimeterPlugins PUBLIC ${FASTJET_INCLUDE_DIRS})

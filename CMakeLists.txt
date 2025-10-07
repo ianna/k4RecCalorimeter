@@ -3,6 +3,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.15)
 project(k4RecCalorimeter LANGUAGES CXX)
 
 include(GNUInstallDirs)
+set(CMAKE_INSTALL_LIBDIR lib)
 include(CTest)
 include(cmake/Key4hepConfig.cmake)
 
